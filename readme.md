@@ -152,6 +152,11 @@ Head - служебный файл указывающий на последни�
 ```mermaid
 graph LR;
 untracked -- "git add" --> staged;
+staged -- "git commit" --> tracked;
+staged -- "изменения" --> modified;
+modified -- "git add" --> staged;
+tracked -- "изменения" --> modified
+
 ```
 
 
